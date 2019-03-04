@@ -1,5 +1,4 @@
 {
-  "editor.fontFamily": "Inconsolata",
   "editor.fontSize": 21,
   "editor.formatOnSave": true,
   "editor.lineHeight": 25,
@@ -36,6 +35,8 @@
     "**/bower_components/**": true,
     "**/dist/**": true
   },
+  "javascript.validate.enable": false,
+
   "search.exclude": {
     "**/.dist": true,
     "**/.git": true,
@@ -43,17 +44,9 @@
     "**/bower_components": true,
     "**/tmp": true
   },
-  "search.useIgnoreFilesByDefault": true,
   "terminal.integrated.fontSize": 16,
-  "terminal.integrated.shellArgs.osx": [
-    "-l"
-  ],
-  "typescript.check.npmIsInstalled": false,
+  "terminal.integrated.shellArgs.osx": ["-l"],
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "One Dark Pro",
-  "workbench.iconTheme": "file-icons-colourless",
-  "workbench.panel.location": "bottom",
-  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Dracula",
+  "workbench.startupEditor": "newUntitledFile"
 }
-
-

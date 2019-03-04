@@ -1,5 +1,5 @@
 # Installation
-# 
+#
 # git clone git@github.com:hramos/dotfiles.git $HOME/dotfiles
 
 echo "Installing xcode-stuff"
@@ -74,6 +74,12 @@ cd ~/.vim
 git submodule init
 git submodule update
 
+echo "Set up VSCode"
+
+ln -s $HOME/dotfiles/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+ln -s $HOME/dotfiles/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
+ln -s $HOME/dotfiles/vscode/snippets/ $HOME/Library/Application\ Support/Code/User/snippets
+
 echo "Setting some Mac settings..."
 
 # Enabling full keyboard access for all controls
@@ -109,4 +115,4 @@ echo "Install Xcode"
 echo "Copy your private SSH keys"
 echo "Set up Touch ID and set up sudo (view source)"
 # To do so, add the following line to /etc/pam.d/sudo on a mac:
-#  auth       sufficient     pam_tid.so 
+#  auth       sufficient     pam_tid.so
