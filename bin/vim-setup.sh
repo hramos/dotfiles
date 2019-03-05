@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Setting up vim"
+
 BASE_DIR="$HOME/.vim"
 PLUGIN_DIR="$BASE_DIR/bundle"
 COLORS_DIR="$BASE_DIR/colors"
@@ -20,7 +22,7 @@ mkdir -p $COLORS_DIR
 mkdir -p $AUTOLOAD_DIR
 
 wget https://raw.githubusercontent.com/hramos/dotfiles/master/.vimrc -O $HOME/.vimrc
-wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim -O $COLORS_DIR/dracula.vim 
+wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim -O $COLORS_DIR/dracula.vim
 
 for PLUGIN in ${PLUGINS[@]}; do
    DIRNAME="$(basename $PLUGIN)"

@@ -2,11 +2,15 @@
 " Plugins
 "============================================================
 " + ctrlp
-" + vim-airline
-" + dracula colour theme
 " + nerdtree
 " + pathogen
+" + vim-airline
+" + vim-airline-themes
+" + vim-gitgutter
+" + vim-js-context-coloring
 " + vim-jsx-improve
+"
+" + dracula theme
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/vim-airline/plugin/airline.vim
@@ -43,13 +47,13 @@ let g:jsx_ext_required = 0
 
 " airline
 let g:airline_theme = 'dracula'
-let g:airline#extensions#tabline#enabled = 0 
-let g:airline#extensions#branch#enabled = 1 
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#branch#enabled = 1
 let g:airline_left_sep = ' 🚀  '
 let g:airline_right_sep = ' ⚛︎  '
-let g:airline_section_warning = '' 
-let g:airline_section_y = '' 
-let g:airline_section_x = '' 
+let g:airline_section_warning = ''
+let g:airline_section_y = ''
+let g:airline_section_x = ''
 set laststatus=2 " for airline
 "============================================================
 " Mappings

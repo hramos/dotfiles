@@ -52,33 +52,15 @@ brew cask install --appdir="/Applications" ${apps[@]}
 brew cask cleanup
 brew cleanup
 
-echo "Git config"
+# Set up git and most used repos
+source "$HOME/dotfiles/bin/git-setup.sh"
 
-git config --global user.name "Héctor Ramos"
-git config --global user.email hector@hectorramos.com
+# Set up vim
+source "$HOME/dotfiles/bin/vim-setup.sh"
 
-echo "Pulling down remote repositories..."
-cd ~
-mkdir git
-cd git
-git clone git@github.com:facebook/react-native.git
-git clone git@github.com:facebook/react-native-website.git
-git clone git@github.com:hramos/react-native-bot.git
-git clone git@github.com:hramos/dotvim.git ~/.vim
-cd ~
+# Set up VSCode
+source "$HOME/dotfiles/bin/vscode-setup.sh"
 
-# To be replaced by a vim bootstrap
-echo "Linking vimrc"
-ln -s ~/.vim/vimrc ~/.vimrc
-cd ~/.vim
-git submodule init
-git submodule update
-
-echo "Set up VSCode"
-
-ln -s $HOME/dotfiles/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
-ln -s $HOME/dotfiles/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
-ln -s $HOME/dotfiles/vscode/snippets/ $HOME/Library/Application\ Support/Code/User/snippets
 
 echo "Setting some Mac settings..."
 
