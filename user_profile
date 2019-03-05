@@ -27,16 +27,22 @@ alias weather='curl -4 http://wttr.in/'
 alias moon='curl -4 http://wttr.in/Moon'
 
 # github
-alias git=hub
+if [ -x "$(command -v hub)" ]; then
+  alias git=hub
+fi
 
 # `ls` colors
 alias ls='ls -GFh'
 alias lsl='ls -aGFhl'
 alias lsa='ls -aGFh'
-alias vi=vim
+if [ -x "$(command -v vim)" ]; then
+  alias vi=vim
+fi
 
 # https://github.com/sharkdp/bat
-alias cat=bat
+if [ -x "$(command -v bat)" ]; then
+  alias cat=bat
+fi
 
 # source control
 # git branchdate
