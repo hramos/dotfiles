@@ -1,7 +1,10 @@
-# .user_profile
-# Like .bash_profile, sans Facebook's additions
+# user_profile
+#
+# Add the following to your .bash_profile:
+#
+# source $HOME/dotfiles/.bash_profile
 
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export EDITOR=vim
