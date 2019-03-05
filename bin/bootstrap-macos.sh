@@ -5,10 +5,6 @@
 echo "Installing xcode-stuff"
 xcode-select --install
 
-echo "Setting up .bash_profile"
-touch $HOME/.bash_profile
-echo "source $HOME/dotfiles/user_profile" >> $HOME/.bash_profile
-
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
@@ -95,6 +91,8 @@ echo "Next Steps:"
 echo "Log in to iCloud on Preferences"
 echo "Install Xcode"
 echo "Copy your private SSH keys"
+echo "Add the following to your ~/.bash_profile:"
+echo "source $HOME/dotfiles/.bash_profile"
 echo "Set up Touch ID and set up sudo (view source)"
 # To do so, add the following line to /etc/pam.d/sudo on a mac:
 #  auth       sufficient     pam_tid.so
