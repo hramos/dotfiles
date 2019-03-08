@@ -29,6 +29,7 @@ export PS1='\h 🚀 \[\e[0;36m\]\[\e[0;36m\] \W\[\033[0;35m\]$(__git_ps1 " (%s)"
 alias weather='curl -4 http://wttr.in/'
 alias moon='curl -4 http://wttr.in/Moon'
 
+alias g=git
 # github
 if [ -x "$(command -v hub)" ]; then
   alias git=hub
@@ -48,9 +49,9 @@ if [ -x "$(command -v bat)" ]; then
 fi
 
 # source control
-# git branchdate
+# Display local branches, sorted by creation date.
 alias gitbranchdate='for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r'
-# hg reset: a last resort to get your local checkout back in track
+# A last resort to get your local checkout back in track
 alias hgreset='hg update --clean -r .; hg revert --all; hg purge --files; hg purge --all; hg gc; hg checkout master --clean; arc pull'
 
 
