@@ -1,4 +1,5 @@
 {
+  "editor.fontFamily": "Menlo, Consolas, DejaVu Sans Mono, monospace",
   "editor.fontSize": 21,
   "editor.formatOnSave": true,
   "editor.lineHeight": 25,
@@ -8,7 +9,6 @@
   "editor.wordWrap": "wordWrapColumn",
   "eslint.packageManager": "yarn",
   "extensions.ignoreRecommendations": true,
-  "explorer.confirmDelete": false,
   "files.exclude": {
     "**/.dist": true,
     "**/*.pyc": {
@@ -36,7 +36,6 @@
     "**/dist/**": true
   },
   "javascript.validate.enable": false,
-
   "search.exclude": {
     "**/.dist": true,
     "**/.git": true,
@@ -48,5 +47,7 @@
   "terminal.integrated.shellArgs.osx": ["-l"],
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Dracula",
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "explorer.openEditors.visible": 0,
+  "explorer.confirmDelete": false
 }

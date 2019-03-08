@@ -22,7 +22,7 @@ source $HOME/dotfiles/git-completion.bash
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 source $HOME/dotfiles/git-prompt.sh
 # Dracula theme colors https://draculatheme.com
-export PS1='🚀 \[\e[0;36m\]\[\e[0;36m\] \W\[\033[0;35m\]$(__git_ps1 " (%s)")\[\e[0m\]: '
+export PS1='\h 🚀 \[\e[0;36m\]\[\e[0;36m\] \W\[\033[0;35m\]$(__git_ps1 " (%s)")\[\e[0m\]: '
 
 # aliases
 # weather and the moon
