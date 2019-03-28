@@ -27,6 +27,7 @@ brew install nvm
 brew install hub
 brew install ruby
 brew install bat
+brew install z
 
 echo "Cleaning up brew"
 brew cleanup

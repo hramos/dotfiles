@@ -1,0 +1,9 @@
+set blink-matching-paren on
+set colored-stats on
+set completion-ignore-case on
+set enable-bracketed-paste on
+
+# Prefix matching previous commands:
+# These bindings change the behavior of the Up/Down arrow keys to cycle through commands that start with the prefix you've already typed.
+"\e[A":history-search-backward
+"\e[B":history-search-forward
