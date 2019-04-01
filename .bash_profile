@@ -4,7 +4,9 @@
 #
 # source $HOME/dotfiles/.bash_profile
 
-source /etc/bashrc
+if [ -f /etc/bashrc ]; then
+  source /etc/bashrc
+fi
 
 set -o vi
 
@@ -76,5 +78,17 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
+update_terminal_cwd() {
+    # Identify the directory using a "file:" scheme URL,
+    # including the host name to disambiguate local vs.
+    # remote connections. Percent-escape spaces.
+    local SEARCH=' '
+    local REPLACE='%20'
+    local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+    printf '\e]7;%s\a' "$PWD_URL"
+}
+
 # z
-. /usr/local/etc/profile.d/z.sh
+if [ -f /usr/local/etc/profile.d/z.sh ]; then
+  source /usr/local/etc/profile.d/z.sh
+fi
