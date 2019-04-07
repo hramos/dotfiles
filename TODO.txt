@@ -1,0 +1,2 @@
+Consolidate on holman/dotfiles layout
+It's automated, handles symlinks automatically, loads paths. Investigate if I can use plain bash instead, or should I learn zsh?
