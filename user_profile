@@ -13,6 +13,9 @@ set -o vi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Silence macOS Catalina's nags
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 export HISTFILESIZE=-1
 export HISTSIZE=1000000
 export HISTCONTROL=ignoredups
@@ -47,6 +50,8 @@ if [ -x "$(command -v hub)" ]; then
   alias git=hub
 fi
 
+alias code=code-fb
+
 # Revert a file to its original version
 alias hgrevert='hg revert -r .~1'
 
@@ -71,6 +76,10 @@ fi
 alias gitbranchdate='for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r'
 # A last resort to get your local checkout back in track
 alias hgreset='hg update --clean -r .; hg revert --all; hg purge --files; hg purge --all; hg gc; hg checkout master --clean; arc pull'
+
+# homebrew
+# Chef owns /usr/local, so we need to temporarily claim it during upgrades
+alias brewupgrade='sudo chown -R $(whoami) $(brew --prefix)/* && brew upgrade'
 
 
 # nvm

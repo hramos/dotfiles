@@ -21,13 +21,23 @@ GEM_HOME=~/.gem gem install bundler
 echo "Updating homebrew..."
 brew update
 
+echo "Installing bash"
+brew install bash
+# Make this bash version be the default login shell
+sudo echo "/usr/local/bin/bash" >> /etc/shells
+chsh -s /usr/local/bin/bash
+sudo chsh -s /usr/local/bin/bash
+
 echo "Installing other stuff"
-brew install wget
-brew install nvm
-brew install hub
-brew install ruby
-brew install bat
-brew install z
+brews=(
+  wget
+  nvm
+  hub
+  ruby
+  bat
+  z
+)
+brew install ${brews[@]}
 
 echo "Cleaning up brew"
 brew cleanup
