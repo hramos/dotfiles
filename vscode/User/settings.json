@@ -1,75 +1,95 @@
 {
-    "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.fontFamily": "Menlo, Consolas, DejaVu Sans Mono, monospace",
-    "editor.fontSize": 21,
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.lineHeight": 25,
-    "editor.renderIndentGuides": true,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.tabCompletion": true,
-    "editor.tabSize": 2,
-    "editor.wordWrap": "wordWrapColumn",
-    "eslint.packageManager": "yarn",
-    "explorer.confirmDelete": false,
-    "explorer.openEditors.visible": 0,
-    "extensions.ignoreRecommendations": true,
-    "fb.ms-remote-connections.odtypes": [
-        {
-            "type": "ondemand_shellserver",
-            "flavor": "default",
-            "folders": []
-        },
-        {
-            "type": "ondemand_mobile",
-            "flavor": "default",
-            "folders": []
-        }
-    ],
-    "files.exclude": {
-      "**/.dist": true,
-      "**/*.pyc": {
-        "when": "$(basename).py"
-      },
-      "**/__pycache__": true,
-      "**/.git": true,
-      "**/.svn": true,
-      "**/.hg": true,
-      "**/CVS": true,
-      "**/.DS_Store": true,
-      "**/tmp": true,
-      "**/node_modules": true,
-      "**/bower_components": true,
-      "**/dist": true
+  "AllAutocomplete.updateOnlyOnSave": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.folding": false,
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineHeight": 25,
+  "editor.renderIndentGuides": true,
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "wordWrapColumn",
+  "emmet.showExpandedAbbreviation": "never",
+  "eslint.packageManager": "yarn",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+  "extensions.ignoreRecommendations": true,
+  "fb.ms-remote-connections.odtypes": [
+    {
+      "type": "ondemand_shellserver",
+      "flavor": "default",
+      "folders": []
     },
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "files.watcherExclude": {
-      "**/.git/objects/**": true,
-      "**/.git/subtree-cache/**": true,
-      "**/node_modules/**": true,
-      "**/tmp/**": true,
-      "**/bower_components/**": true,
-      "**/dist/**": true
-    },
-    "hg.jumpToNextConflictOnSave": "Jump On Save And Open ISL When Done",
-    "interactive-smartlog.autoRunMergeDrivers": true,
-    "interactive-smartlog.fetch": "jf get",
-    "interactive-smartlog.pull": "arc pull",
-    "javascript.validate.enable": false,
-    "search.exclude": {
-      "**/.dist": true,
-      "**/.git": true,
-      "**/node_modules": true,
-      "**/bower_components": true,
-      "**/tmp": true
-    },
-    "terminal.integrated.fontSize": 16,
-    "terminal.integrated.shellArgs.osx": ["-l"],
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Dracula",
-    "workbench.startupEditor": "newUntitledFile",
-    "[cpp]": {
-        "editor.defaultFormatter": "nuclide.cpp"
+    {
+      "type": "ondemand_mobile",
+      "flavor": "default",
+      "folders": []
     }
-  }
+  ],
+  "files.exclude": {
+    "**/.dist": true,
+    "**/*.pyc": {
+      "when": "$(basename).py"
+    },
+    "**/__pycache__": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/tmp": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/bower_components/**": true,
+    "**/dist/**": true
+  },
+  "gitlens.codeLens.enabled": false,
+  "hg.jumpToNextConflictOnSave": "Jump On Save And Open ISL When Done",
+  "interactive-smartlog.autoRunMergeDrivers": true,
+  "interactive-smartlog.fetch": "jf get",
+  "interactive-smartlog.pull": "arc pull",
+  "javascript.validate.enable": false,
+  "search.exclude": {
+    "**/.dist": true,
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true
+  },
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.profiles.osx": {
+    "bash (login)": {
+      "path": "bash",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "window.zoomLevel": 0,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.startupEditor": "newUntitledFile",
+  "[cpp]": {
+    "editor.defaultFormatter": "nuclide.cpp"
+  },
+  "editor.suggestSelection": "first",
+  "terminal.integrated.defaultProfile.osx": "bash"
+}

@@ -39,10 +39,10 @@ PS1='[\[\033[0;31m\]\u\[\033[m\] \[\033[0;34m\]\w\[\033[0;33m\]$(__git_ps1 " (%s
 alias weather='curl -4 http://wttr.in/'
 alias moon='curl -4 http://wttr.in/Moon'
 
+# git
 alias g=git
-# github
-if [ -x "$(command -v hub)" ]; then
-  alias git=hub
+if [ -f $HOME/.git-prompt.sh ]; then
+  source $HOME/.git-prompt.sh
 fi
 
 alias code=code-fb

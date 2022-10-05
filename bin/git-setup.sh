@@ -15,10 +15,6 @@ if ! [ -x "$(command -v git)" ]; then
   exit 1
 fi
 
-# User
-git config --global user.name "Héctor Ramos"
-git config --global user.email hector@hectorramos.com
-
 # Remotes
 echo "Pulling down remote repositories..."
 mkdir -p $BASE_DIR
