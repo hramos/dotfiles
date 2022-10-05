@@ -24,4 +24,3 @@ code --install-extension IBM.output-colorizer
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension oderwat.indent-rainbow
 code --install-extension usernamehw.errorlens
-code --install-extension ziyasal.vscode-open-in-github
