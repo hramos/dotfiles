@@ -69,8 +69,6 @@ source "$HOME/dotfiles/bin/vim-setup.sh"
 
 # Set up VSCode
 ./vscode/setup
-source "$HOME/dotfiles/bin/vscode-setup.sh"
-
 
 echo "Setting some Mac settings..."
 
