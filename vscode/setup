@@ -1,0 +1,27 @@
+#!/bin/sh
+# Setup a machine for VSCode
+set -x
+
+# Some of my machines use a custom VS Code install, in which
+# case the VSCODE_DIR envvar will be set.
+source $HOME/.bash_profile
+vscode_dir=${VSCODE_DIR:-~/Library/Application\ Support/Code}
+
+ln -s "$PWD/User" "$vscode_dir/User"
+
+code --install-extension adpyke.codesnap
+code --install-extension Atishay-Jain.All-Autocomplete
+code --install-extension christian-kohler.npm-intellisense
+code --install-extension codezombiech.gitignore
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension eamodio.gitlens
+code --install-extension esbenp.prettier-vscode
+code --install-extension file-icons.file-icons
+code --install-extension GitHub.copilot
+code --install-extension GraphQL.vscode-graphql
+code --install-extension GraphQL.vscode-graphql-syntax
+code --install-extension IBM.output-colorizer
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension oderwat.indent-rainbow
+code --install-extension usernamehw.errorlens
+code --install-extension ziyasal.vscode-open-in-github

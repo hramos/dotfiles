@@ -1,8 +1,12 @@
 # user_profile
 #
+# .bash_profile is managed by Chef on some of my machines,
+# so instead of overwriting it, I source a .user_profile
+# with my own config.
+#
 # Add the following to your .bash_profile:
 #
-# source $HOME/dotfiles/.bash_profile
+# source $HOME/.user_profile
 
 if [ -f /etc/bashrc ]; then
   source /etc/bashrc
@@ -20,24 +24,15 @@ export HISTFILESIZE=-1
 export HISTSIZE=1000000
 export HISTCONTROL=ignoredups
 shopt -s histappend
-export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+#export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 export EDITOR=vim
 
 # gpg
 export GPG_TTY=$(tty)
 
-# SHELL COMPLETION
-# git
-# https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
-source $HOME/dotfiles/git-completion.bash
-
-# PROMPT
-# git
-# https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-source $HOME/dotfiles/git-prompt.sh
-# Dracula theme colors https://draculatheme.com
-export PS1='\u@\h 🚀 \[\e[0;36m\]\[\e[0;36m\] \W\[\033[0;35m\]$(__git_ps1 " (%s)")\[\e[0m\]: '
+# terminal prompt
+PS1='[\[\033[0;31m\]\u\[\033[m\] \[\033[0;34m\]\w\[\033[0;33m\]$(__git_ps1 " (%s)")\[\033[m\]]\$ '
 
 # aliases
 # weather and the moon
@@ -68,7 +63,7 @@ fi
 
 # https://github.com/sharkdp/bat
 if [ -x "$(command -v bat)" ]; then
-  alias cat=bat
+  alias cat='bat --theme=$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub) $argv'
 fi
 
 # source control
@@ -80,7 +75,9 @@ alias hgreset='hg update --clean -r .; hg revert --all; hg purge --files; hg pur
 # homebrew
 # Chef owns /usr/local, so we need to temporarily claim it during upgrades
 alias brewupgrade='sudo chown -R $(whoami) $(brew --prefix)/* && brew upgrade'
-
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

@@ -21,9 +21,6 @@ mkdir -p $PLUGIN_DIR
 mkdir -p $COLORS_DIR
 mkdir -p $AUTOLOAD_DIR
 
-#wget https://raw.githubusercontent.com/hramos/dotfiles/master/.vimrc -O $HOME/.vimrc
-#wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim -O $COLORS_DIR/dracula.vim
-
 for PLUGIN in ${PLUGINS[@]}; do
    DIRNAME="$(basename $PLUGIN)"
    git clone https://github.com/$PLUGIN.git $PLUGIN_DIR/$DIRNAME

@@ -1,0 +1,48 @@
+[user]
+  name = Héctor Ramos
+  email = hector@hectorramos.com
+  signingkey = 9301BE91FFEA9802
+[includeIf "gitdir:~/fbsource/"]
+  path = ~/.gitconfig-meta
+[alias]
+  st = status
+  amend = commit --amend --no-edit
+  a = commit --amend --no-edit
+  co = checkout
+  br = branch
+  cp = cherry-pick
+  rb = pull --rebase
+  rbu = pull --rebase upstream main
+  g = graph
+  graph = log --all --decorate --oneline --graph
+  logo = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ (%cn)" --decorate
+  logf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ (%cn)" --decorate --numstat
+[color]
+  ui = true
+[core]
+  excludesfile = ~/.gitignore-global
+  autocrlf = input
+  pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+[log]
+  date = relative
+[push]
+  default = current
+	autoSetupRemote = true
+[branch]
+  autosetuprebase = always
+[remote "origin"]
+  prune = true
+[init]
+  defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
+[add.interactive]
+  useBuiltin = false
+[delta]
+    navigate = true # Use n and N to move between diff sections.
+    light = false # Set to `true` if you prefer light themes.
+	side-by-side = true # Enables the side-by-side view.

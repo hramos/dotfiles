@@ -30,11 +30,13 @@ sudo chsh -s /usr/local/bin/bash
 
 echo "Installing other stuff"
 brews=(
-  wget
-  nvm
-  hub
-  ruby
   bat
+  delta
+  gh
+  nvm
+  ruby
+  wget
+  yarn
   z
 )
 brew install ${brews[@]}
@@ -46,9 +48,9 @@ brew cleanup
 apps=(
   1password
   discord
-  docker
+#  docker
   spotify
-  visual-studio-code
+#  visual-studio-code
 )
 
 # Install apps to /Applications
@@ -66,6 +68,7 @@ source "$HOME/dotfiles/bin/git-setup.sh"
 source "$HOME/dotfiles/bin/vim-setup.sh"
 
 # Set up VSCode
+./vscode/setup
 source "$HOME/dotfiles/bin/vscode-setup.sh"
 
 
@@ -102,8 +105,8 @@ echo "Next Steps:"
 echo "Log in to iCloud on Preferences"
 echo "Install Xcode"
 echo "Copy your private SSH keys"
-echo "Add the following to your ~/.bash_profile:"
-echo "source $HOME/dotfiles/.bash_profile"
+echo "Run the bootstrap script:"
+echo "./$HOME/dotfiles/bootstrap"
 echo "Set up Touch ID and set up sudo (view source)"
 # To do so, add the following line to /etc/pam.d/sudo on a mac:
 #  auth       sufficient     pam_tid.so
