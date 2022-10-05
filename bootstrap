@@ -111,7 +111,7 @@ install_dotfiles () {
   done
 }
 
-wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ./git/git-prompt.sh.symlink
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O $DOTFILES_ROOT/git/git-prompt.sh.symlink
 
 install_dotfiles
 
