@@ -1,15 +1,29 @@
 #!/bin/sh
 # Setup a machine for VSCode
-# NOTE: Remove existing User/ directory in VSCODE_DIR before running this script for the first time.
+# Place VSCode User configuration files in vscode/User, which will be symlinked to the VSCode user dir.
 
 set -x
 
+if test ! "$(uname)" = "Darwin"
+  then
+  exit 0
+fi
+
 # Some of my machines use a custom VS Code install, in which
 # case the VSCODE_DIR envvar will be set.
-source $HOME/.bash_profile
 vscode_dir=${VSCODE_DIR:-~/Library/Application\ Support/Code}
+if [[ ! -d $VSCODE_DIR ]]; then
+    echo "Could not locate Visual Studio Code at $VSCODE_DIR"
+    echo "Reminder: you may set the VSCODE_DIR envvar if you happen to have a fork of VSCode installed elsewhere..."
+    exit 1
+fi
 
-ln -s "$PWD/User" "$vscode_dir/User"
+vscode_user_dir="$vscode_dir/User"
+
+if [[ ! -L "$vscode_user_dir" ]]; then
+    mv "$vscode_user_dir" "$vscode_dir/User.bku"
+    ln -s "$PWD/User" "$vscode_user_dir"
+fi
 
 code --install-extension adpyke.codesnap
 code --install-extension Atishay-Jain.All-Autocomplete
