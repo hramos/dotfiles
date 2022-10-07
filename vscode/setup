@@ -1,5 +1,7 @@
 #!/bin/sh
 # Setup a machine for VSCode
+# NOTE: Remove existing User/ directory in VSCODE_DIR before running this script for the first time.
+
 set -x
 
 # Some of my machines use a custom VS Code install, in which
