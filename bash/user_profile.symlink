@@ -26,7 +26,9 @@ export HISTCONTROL=ignoredups
 shopt -s histappend
 #export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-export EDITOR=vim
+export EDITOR='code'
+
+export PATH="./bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
 
 # gpg
 export GPG_TTY=$(tty)

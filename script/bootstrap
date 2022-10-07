@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
+#
+# bootstrap installs things.
 
+cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 
 set -e
@@ -111,11 +114,22 @@ install_dotfiles () {
   done
 }
 
+# git-prompt
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O $DOTFILES_ROOT/git/git-prompt.sh.symlink
 
 install_dotfiles
 
-sudo mkdir -p /usr/local/bin
+# If we're on a Mac, let's install and setup homebrew.
+if [ "$(uname -s)" == "Darwin" ]
+then
+  info "Installing dependencies"
+  if source bin/dot | while read -r data; do info "$data"; done
+  then
+    success "Dependencies installed"
+  else
+    fail "Error installing dependencies"
+  fi
+fi
 
 echo ''
 echo '  All installed!'

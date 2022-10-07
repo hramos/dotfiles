@@ -1,9 +1,8 @@
-[user]
-  name = Héctor Ramos
-  email = hector@hectorramos.com
-  signingkey = 9301BE91FFEA9802
-[includeIf "gitdir:~/fbsource/"]
-  path = ~/.gitconfig-meta
+# Local/private config goes in the include
+[include]
+  path = ~/.gitconfig.local
+[hub]
+  protocol = https
 [alias]
   st = status
   amend = commit --amend --no-edit
@@ -18,16 +17,24 @@
   logo = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ (%cn)" --decorate
   logf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ (%cn)" --decorate --numstat
 [color]
+  diff = auto
+  status = auto
+  branch = auto
   ui = true
 [core]
   excludesfile = ~/.gitignore-global
+  editor = vim
   autocrlf = input
   pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+[help]
+  autocorrect = 1
 [log]
   date = relative
 [push]
   default = current
 	autoSetupRemote = true
+[credential]
+	helper = osxkeychain
 [branch]
   autosetuprebase = always
 [remote "origin"]
