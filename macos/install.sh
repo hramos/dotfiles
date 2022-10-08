@@ -6,7 +6,6 @@ fi
 echo "Installing command line tools"
 # Command line tools
 xcode-select --install
-sudo xcodebuild -license
 
 # The Brewfile handles Homebrew-based app and library installs, but there may
 # still be updates and installables in the Mac App Store. There's a nifty
