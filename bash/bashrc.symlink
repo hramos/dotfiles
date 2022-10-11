@@ -7,6 +7,9 @@ export PROJECTS=~/Code
 # source every .zsh file in this repo
 find $ZSH -iname "*.zsh" -exec sh -c 'source {}' \;
 
+# path
+export PATH="./bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
+
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
@@ -15,5 +18,3 @@ export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL=
-
-setopt HIST_IGNORE_DUPS
