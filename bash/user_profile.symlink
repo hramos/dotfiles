@@ -26,8 +26,6 @@ export HISTCONTROL=ignoredups
 shopt -s histappend
 #export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-export EDITOR='code'
-
 export PATH="./bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
 
 # gpg
