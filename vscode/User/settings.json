@@ -63,7 +63,7 @@
   "gitlens.codeLens.enabled": false,
   "hg.jumpToNextConflictOnSave": "Jump On Save And Open ISL When Done",
   "interactive-smartlog.autoRunMergeDrivers": true,
-  "interactive-smartlog.fetch": "jf get",
+  "interactive-smartlog.fetch": "jf get and checkout",
   "interactive-smartlog.pull": "arc pull",
   "javascript.validate.enable": false,
   "search.exclude": {

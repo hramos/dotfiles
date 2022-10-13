@@ -4,13 +4,11 @@
 # so instead of overwriting it, I source a .user_profile
 # with my own config.
 #
-# Add the following to your .bash_profile:
+# Add the following to your .bashrc:
 #
-# source $HOME/.user_profile
-
-if [ -f /etc/bashrc ]; then
-  source /etc/bashrc
-fi
+# if [ -f ~/.user_profile ]; then
+#   source ~/.user_profile
+# fi
 
 set -o vi
 
