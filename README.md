@@ -22,6 +22,8 @@ cd ~/.dotfiles
 script/bootstrap
 ```
 
+> New Mac? Run `xcode-select --install` first.
+
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 

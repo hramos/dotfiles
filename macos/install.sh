@@ -3,10 +3,6 @@ if test ! "$(uname)" = "Darwin"
   exit 0
 fi
 
-echo "Installing command line tools"
-# Command line tools
-xcode-select --install
-
 # The Brewfile handles Homebrew-based app and library installs, but there may
 # still be updates and installables in the Mac App Store. There's a nifty
 # command line interface to it that we can use to just install everything, so

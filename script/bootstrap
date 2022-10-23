@@ -114,9 +114,6 @@ install_dotfiles () {
   done
 }
 
-# git-prompt
-wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O $DOTFILES_ROOT/git/git-prompt.sh.symlink
-
 install_dotfiles
 
 # If we're on a Mac, let's install and setup homebrew.
