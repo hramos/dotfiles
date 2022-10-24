@@ -1,8 +1,6 @@
 # Local/private config goes in the include
 [include]
   path = ~/.gitconfig.local
-[hub]
-  protocol = https
 [alias]
   st = status
   amend = commit --amend --no-edit
@@ -25,7 +23,6 @@
   excludesfile = ~/.gitignore-global
   editor = vim
   autocrlf = input
-  pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
 [help]
   autocorrect = 1
 [log]
