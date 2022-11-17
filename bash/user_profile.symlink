@@ -43,8 +43,6 @@ if [ -f $HOME/.git-prompt.sh ]; then
   source $HOME/.git-prompt.sh
 fi
 
-alias code=code-fb
-
 # Revert a file to its original version
 alias hgrevert='hg revert -r .~1'
 
@@ -76,6 +74,9 @@ alias brewupgrade='sudo chown -R $(whoami) $(brew --prefix)/* && brew upgrade'
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

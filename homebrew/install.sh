@@ -21,4 +21,7 @@ then
 
 fi
 
+brew update
+brew bundle
+
 exit 0
