@@ -83,3 +83,8 @@ if [[ ! -d $VSCODE_DIR ]]; then
   exit 1
 fi
 configure_user_dir $vscode_dir
+
+if test ! $(which code)
+then
+  echo "  Install 'code' command in PATH by launching VS Code, then typing `shell command` into the Command Palette (Cmd+Shift+P)."
+fi
