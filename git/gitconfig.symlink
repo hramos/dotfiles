@@ -53,3 +53,7 @@
     navigate = true # Use n and N to move between diff sections.
     light = false # Set to `true` if you prefer light themes.
 	side-by-side = true # Enables the side-by-side view.
+[user]
+	signingkey = 9301BE91FFEA9802
+	name = Héctor O. Ramos Ortiz
+	email = hector@hectorramos.com
