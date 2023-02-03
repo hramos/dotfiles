@@ -57,3 +57,5 @@
 	signingkey = 9301BE91FFEA9802
 	name = Héctor O. Ramos Ortiz
 	email = hector@hectorramos.com
+[commit]
+	gpgsign = true

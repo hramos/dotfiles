@@ -75,6 +75,9 @@ update_terminal_cwd() {
     printf '\e]7;%s\a' "$PWD_URL"
 }
 
+# php
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+
 # z
 if [ -f /usr/local/etc/profile.d/z.sh ]; then
   source /usr/local/etc/profile.d/z.sh
