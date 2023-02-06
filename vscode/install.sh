@@ -74,15 +74,8 @@ function configure_user_dir {
   fi
 }
 
-# Some of my machines use a custom VS Code install, in which
-# case the VSCODE_DIR envvar will be set.
-vscode_dir=${VSCODE_DIR:-~/Library/Application\ Support/Code}
-if [[ ! -d $VSCODE_DIR ]]; then
-  echo "Could not locate Visual Studio Code at $VSCODE_DIR"
-  echo "Reminder: you may set the VSCODE_DIR envvar if you happen to have a fork of VSCode installed elsewhere..."
-  exit 1
-fi
-configure_user_dir $vscode_dir
+vscode_dir=~/Library/Application\ Support/Code
+ln -s "$PWD/User" "$vscode_dir/User"
 
 if test ! $(which code)
 then
