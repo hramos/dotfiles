@@ -1,21 +1,21 @@
 {
   "AllAutocomplete.updateOnlyOnSave": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   "editor.folding": false,
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": false,
   "editor.fontSize": 14,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
+
   "editor.inlineSuggest.enabled": true,
   "editor.lineHeight": 25,
-  "editor.renderIndentGuides": true,
   "editor.suggest.localityBonus": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.wordWrap": "wordWrapColumn",
   "emmet.showExpandedAbbreviation": "never",
+  "eslint.alwaysShowStatus": true,
   "eslint.packageManager": "yarn",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -78,18 +78,24 @@
   "terminal.integrated.profiles.osx": {
     "bash (login)": {
       "path": "bash",
-      "args": [
-        "-l"
-      ]
+      "args": ["-l"]
     }
   },
-  "window.zoomLevel": 0,
-  "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.hint": "hidden",
   "workbench.startupEditor": "newUntitledFile",
-  "[cpp]": {
-    "editor.defaultFormatter": "nuclide.cpp"
-  },
   "editor.suggestSelection": "first",
-  "terminal.integrated.defaultProfile.osx": "bash"
+  "terminal.integrated.defaultProfile.osx": "bash",
+  "editor.guides.indentation": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.userWords": ["Pressable"],
+  "editor.minimap.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[typescriptreact]": {},
+  "editor.wordWrapColumn": 160,
+  "files.autoSaveDelay": 5000,
+  "react-native-tools.showUserTips": false,
+  "phpCodeSniffer.standard": "Custom",
+  "phpCodeSniffer.autoExecutable": true,
+  "phpCodeSniffer.standardCustom": "PSR2"
 }

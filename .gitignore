@@ -1,5 +1,6 @@
 vscode/User/globalStorage
 vscode/User/History/
 vscode/User/workspaceStorage
+vscode/User/sync
 git/gitconfig.local.symlink
 git/gitconfig.work.local.symlink
