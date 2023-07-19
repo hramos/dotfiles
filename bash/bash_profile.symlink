@@ -82,3 +82,8 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 if [ -f /usr/local/etc/profile.d/z.sh ]; then
   source /usr/local/etc/profile.d/z.sh
 fi
+
+# bashrc
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
