@@ -12,7 +12,7 @@ export HISTCONTROL=ignoredups
 shopt -s histappend
 #export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-export PATH="./bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
+export PATH="./bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$HOME/.local/bin:$PATH"
 
 # gpg
 export GPG_TTY=$(tty)
@@ -30,6 +30,9 @@ alias g=git
 if [ -f $HOME/.git-prompt.sh ]; then
   source $HOME/.git-prompt.sh
 fi
+
+# claude code
+alias clyde="claude --dangerously-skip-permissions"
 
 # Revert a file to its original version
 alias hgrevert='hg revert -r .~1'
@@ -77,6 +80,7 @@ update_terminal_cwd() {
 
 # php
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # z
 if [ -f /usr/local/etc/profile.d/z.sh ]; then
@@ -87,3 +91,7 @@ fi
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/hramos/.cache/lm-studio/bin"
+# End of LM Studio CLI section
